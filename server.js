@@ -1,23 +1,19 @@
-const path = require('path')
 const express = require("express");
+const path = require("path");
+const PORT = process.env.PORT || 3001;
 const app = express();
-const bodyParser = require("body-parser");
 
-
-app.use(bodyParser.json());
-// support encoded bodies
-app.use(bodyParser.urlencoded({ extended: false }));
-
+// Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  // Exprees will serve up production assets
-  app.use(express.static(path.join(__dirname, 'client')));
-
-  // Express serve up index.html file if it doesn't recognize route
-  app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '/pubic/index.html'));
-  });
+  app.use(express.static("client/build"));
 }
 
-//dynamic port binding
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Express server istening on port ${PORT}`));
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
+app.listen(PORT, function() {
+  console.log(`🌎 ==> Server now on port ${PORT}!`);
+});
