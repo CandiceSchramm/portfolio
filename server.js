@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
 
   // Express serve up index.html file if it doesn't recognize route
   app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'client', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client', '/pubic/index.html'));
   });
 }
 
