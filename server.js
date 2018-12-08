@@ -10,11 +10,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 if (process.env.NODE_ENV === "production") {
   // Exprees will serve up production assets
-  app.use(express.static("/build"));
+  app.use(express.static("/client"));
 
   // Express serve up index.html file if it doesn't recognize route
   app.get("*", function(req, res) {
-    const index = path.join(__dirname, "build", "index.html");
+    const index = path.join(__dirname, "build", "/client/index.html");
     res.sendFile(index);
   });
 }
