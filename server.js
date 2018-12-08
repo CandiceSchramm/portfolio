@@ -1,7 +1,8 @@
+const path = require('path')
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const path = require('path')
+
 
 app.use(bodyParser.json());
 // support encoded bodies
@@ -13,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
 
   // Express serve up index.html file if it doesn't recognize route
   app.get("*", function(req, res) {
-    const index = path.join(__dirname, "build", "index.html");
+    const index = path.join(__dirname, "public", "index.html");
     res.sendFile(index);
   });
 }
