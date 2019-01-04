@@ -4,17 +4,19 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
+import { amber, grey } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
-    palette: {
-      primary: {
-        main: '#7e57c2',
-      },
-      secondary: {
-        main: '#00bcd4',
-      },
+  palette: {
+    type: "light",
+    primary: {
+      main: grey[900]
     },
-  });
+    secondary: amber
+    // light: green[50],
+    // dark: green[800]
+  }
+});
 
 ReactDOM.render(
   <MuiThemeProvider theme={theme}>
