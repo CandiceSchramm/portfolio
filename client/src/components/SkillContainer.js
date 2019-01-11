@@ -10,6 +10,11 @@ const styles = theme => ({
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2
+  },
+  paper: {
+    minHeight: "30vh",
+    marginTop: "10vh",
+    padding: "6vh"
   }
 });
 
@@ -25,7 +30,7 @@ function PaperSheet(props) {
       className="center-item"
     >
       <Grid item sm={8}>
-        <Paper className={classes.root} elevation={8}>
+        <Paper className={classes.root && classes.paper} elevation={8}>
           <Grid
             container
             direction="row"
