@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Skill from "./Skill";
+import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
   root: {
@@ -16,18 +17,42 @@ function PaperSheet(props) {
   const { classes, skillLogos } = props;
 
   return (
-    <div className="center-skill-container">
-    <Paper className={classes.root} elevation={8}>
-      {skillLogos.map((skillLogo,index) => (
-        <Skill img={skillLogo} key={index}/>
-      ))}
-      </Paper>
-    </div>
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      className="center-item"
+    >
+      <Grid item sm={8}>
+        <Paper className={classes.root} elevation={8}>
+          <Grid
+            container
+            direction="row"
+            justify="space-around"
+            alignItems="center"
+          >
+            <Grid item sm={12}>
+              <Grid
+                container
+                direction="row"
+                justify="space-around"
+                alignItems="center"
+              >
+                {skillLogos.map((skillLogo, index) => (
+                  <Skill img={skillLogo} key={index} />
+                ))}
+              </Grid>
+            </Grid>
+          </Grid>
+        </Paper>
+      </Grid>
+    </Grid>
   );
 }
 
 PaperSheet.propTypes = {
-    classes: PropTypes.object.isRequired
-  };
-  
-  export default withStyles(styles)(PaperSheet);
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(PaperSheet);
