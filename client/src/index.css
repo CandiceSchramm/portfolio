@@ -9,16 +9,15 @@ a {
 
 .navbar {
   z-index: 999;
-
 }
 
 .center-item {
-  width: 70%;
+  /* width: 70%; */
   position: absolute;
-  margin: auto;
+  /* margin: auto;
   top: 15%;
   left: 0;
-  right: 0;
+  right: 0; */
 }
 .center-container {
   width: 100%;
@@ -44,28 +43,22 @@ a {
 }
 
 .font-style-title {
-  font-family: 'Monoton', cursive;
+  font-family: "Monoton", cursive;
   color: #ffc107;
-  font-size: 50px;
+  font-size: 40px;
+}
+.font-style-menu {
+  font-family: "Monoton", cursive;
+  color: #ffc107;
+  font-size: 30px;
 }
 .intro {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #212121;
   font-size: 40px;
-  position: absolute;
-  top: 10%;
-  width: 100%;
-  height: 80px;
+  white-space: nowrap;
   -ms-transform: rotate(270deg); /* IE 9 */
   -webkit-transform: rotate(270deg); /* Safari 3-8 */
   transform: rotate(270deg);
-}
-
-#particles-js {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
 }
 

@@ -19,15 +19,18 @@ const styles = {
     marginLeft: -12,
     marginRight: 20
   }
-
-
 };
 
 function Navbar(props) {
   const { classes } = props;
   return (
-    <div className={classes.root} >
-      <AppBar position="static" color="primary" elevation={1} className="navbar"> 
+    <div className={classes.root}>
+      <AppBar
+        position="static"
+        color="primary"
+        elevation={1}
+        className="navbar"
+      >
         <Toolbar>
           <IconButton
             className={classes.menuButton}
@@ -37,7 +40,7 @@ function Navbar(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" color="inherit" className={classes.grow}>
-            .
+          <p className="font-style-menu">CS</p>
           </Typography>
           <a href="/">
             <Button color="inherit">Home</Button>

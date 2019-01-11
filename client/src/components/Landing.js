@@ -25,14 +25,17 @@ function PaperSheet(props) {
 
   return (
     <div className="center-item">
-      <Paper className={classes.root} elevation={1}>
+      <Paper className={classes.root} elevation={8}>
         <div className="center-container">
           <Typography variant="h2" gutterBottom color="secondary">
-            Hello World
+            <p className="intro">Hello World!</p>
           </Typography>
-          <Typography variant="subheading" gutterBottom color="secondary">
-            Full Stack Web Developement by Candice Schramm
+          <Typography variant="subheading" gutterBottom color="primary">
+            Full Stack Web Developement by
           </Typography>
+          <div className="right-title">
+            <p className="font-style-title">Candice Schramm</p>
+          </div>
         </div>
       </Paper>
       <div className="center-container">

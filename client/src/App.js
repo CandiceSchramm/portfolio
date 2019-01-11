@@ -34,7 +34,9 @@ import memoryGamePic from "./images/project_emoji.jpeg";
 import crystalCollectorPic from "./images/project_crystal_collector.jpg";
 import liriPic from "./images/project_liri.png";
 import bamazonPic from "./images/project_bamazon.png";
-import zIndex from "@material-ui/core/styles/zIndex";
+import burgerPic from "./images/project_burger.png";
+import hushPic from "./images/project_hush.png";
+import groupSquadGoalsPic from "./images/project_squad_goals.png";
 
 // skill images
 
@@ -77,6 +79,18 @@ const projects = [
   {
     img: bamazonPic,
     title: "Bamazon Node/SQL App"
+  },
+  {
+    img: burgerPic,
+    title: "Eat Dem Burgers!"
+  },
+  {
+    img: hushPic,
+    title: "Hush... What's Your Secret?"
+  },
+  {
+  img: groupSquadGoalsPic,
+  title: "#SquadGoals"
   }
 ];
 

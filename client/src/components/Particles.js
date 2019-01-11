@@ -27,17 +27,17 @@ class Particle extends Component {
               enable: true,
               distance: 100,
               color: "#9E9E9E",
-              opacity: 0.5,
-              width: 1
+              opacity: 0.2,
+              width: 1.5
             },
             color: {
               value: [
-                "#4a126b",
-                "#6a1b9a",
-                "#8748ae",
-                "#015384",
-                "#0277bd",
-                "#3492ca"
+                "#424242",
+                "#616161",
+                "#757575",
+                "#FFCA28",
+                "#FFD54F",
+                "#FFB300"
               ]
             },
           },
