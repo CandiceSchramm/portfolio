@@ -46,19 +46,26 @@ a {
   font-family: "Monoton", cursive;
   color: #ffc107;
   font-size: 40px;
+  word-spacing: 1rem;
 }
 .font-style-menu {
   font-family: "Monoton", cursive;
   color: #ffc107;
   font-size: 30px;
+  letter-spacing: .3rem;
 }
 .intro {
   font-family: "Roboto", sans-serif;
   color: #212121;
-  font-size: 40px;
+  font-size: 35px;
   white-space: nowrap;
-  -ms-transform: rotate(270deg); /* IE 9 */
-  -webkit-transform: rotate(270deg); /* Safari 3-8 */
-  transform: rotate(270deg);
+  align-content: flex-start
 }
 
+@media only screen and (min-width: 600px) {
+  .intro {
+    -ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Safari 3-8 */
+    transform: rotate(270deg);
+  }
+}

@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
 import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
   root: {
@@ -17,6 +18,14 @@ const styles = theme => ({
   },
   extendedIcon: {
     marginRight: theme.spacing.unit
+  },
+  paper: {
+    minHeight: "30vh",
+    marginTop: "10vh",
+    padding: "6vh"
+  },
+  socialButtons: {
+    marginTop: "8vh"
   }
 });
 
@@ -24,32 +33,58 @@ function PaperSheet(props) {
   const { classes } = props;
 
   return (
-    <div className="center-item">
-      <Paper className={classes.root} elevation={8}>
-        <div className="center-container">
-          <Typography variant="h2" gutterBottom color="secondary">
-            <p className="intro">Hello World!</p>
-          </Typography>
-          <Typography variant="subheading" gutterBottom color="primary">
-            Full Stack Web Developement by
-          </Typography>
-          <div className="right-title">
-            <p className="font-style-title">Candice Schramm</p>
-          </div>
-        </div>
-      </Paper>
-      <div className="center-container">
-        <Fab color="primary" aria-label="Add" className={classes.fab}>
-          <AddIcon />
-        </Fab>
-        <Fab color="primary" aria-label="Add" className={classes.fab}>
-          <AddIcon />
-        </Fab>
-        <Fab color="primary" aria-label="Add" className={classes.fab}>
-          <AddIcon />
-        </Fab>
-      </div>
-    </div>
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      className="center-item"
+    >
+      <Grid item sm={8}>
+        <Paper className={classes.root && classes.paper} elevation={8}>
+          <Grid
+            container
+            spacing={8}
+            direction="row"
+            justify="center"
+            alignItems="center"
+          >
+            <Grid item sm={3}>
+              <p className="intro">Hello World!</p>
+            </Grid>
+            <Grid item sm={9}>
+              <Typography variant="subheading" color="primary">
+                Full Stack Web Developement by
+              </Typography>
+              <div className="font-style-title" style={{ paddingBottom: 0 }}>
+                Candice Schramm
+              </div>
+            </Grid>
+            <Grid item sm={12}>
+              <Grid
+                container
+                spacing={8}
+                direction="row"
+                justify="center"
+                alignItems="center"
+              >
+                <Grid item sm={4} className={classes.socialButtons}>
+                  <Fab color="primary" aria-label="Add" className={classes.fab}>
+                    <AddIcon />
+                  </Fab>
+                  <Fab color="primary" aria-label="Add" className={classes.fab}>
+                    <AddIcon />
+                  </Fab>
+                  <Fab color="primary" aria-label="Add" className={classes.fab}>
+                    <AddIcon />
+                  </Fab>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Paper>
+      </Grid>
+    </Grid>
   );
 }
 

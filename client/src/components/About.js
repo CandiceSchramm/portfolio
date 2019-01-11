@@ -12,8 +12,9 @@ const styles = theme => ({
     paddingBottom: theme.spacing.unit * 2
   },
   paper: {
-    padding: theme.spacing.unit * 2,
-    margin: "auto"
+    minHeight:"40vh",
+    marginTop: "10vh",
+    padding: "6vh"
   }
 });
 
@@ -21,29 +22,42 @@ function PaperSheet(props) {
   const { classes } = props;
 
   return (
-    <Grid container justify="center" className="center-item">
-      <Grid item xs={8}>
-        <Paper className={classes.root} elevation={8}>
-          <Grid container direction="column">
-            <Grid item xs={12}>
-              <Grid item xs={10}>
-                <div className="intro">My name is</div>
-                <p className="font-style-title">Candice Schramm</p>
-                <Typography variant="subtitle1" gutterBottom color="primary">
-                  I am a web developer and mortgage loan processor. I can be
-                  found at the local coffee shop working on my next creative
-                  project or collaborating with other software developers to
-                  make our application ideas come to life on the web. I guess
-                  you could say I have three loves in life: coffee, creating
-                  innovative web applications and the outdoors. Interested in
-                  getting outside? No problem. Meet me in the mountains for some
-                  rock climbing, snowboarding, hiking, or camping. It's
-                  important stay focused and inspired to do what you love and I
-                  love challenging myself to create fun and interesting web
-                  applications using clean code and creative UX/UI skills... and
-                  coffee and the outdoors, of course.
-                </Typography>
-              </Grid>
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      className="center-item"
+    >
+      <Grid item sm={8}>
+        <Paper className={classes.root && classes.paper} elevation={8}>
+          <Grid
+            container
+            spacing={8}
+            direction="row"
+            justify="center"
+            alignItems="center"
+          >
+            <Grid item sm={2}>
+              <div className="intro">My name is</div>
+            </Grid>
+
+            <Grid item sm={10}>
+              <div className="font-style-title" style={{ paddingBottom: 20 }}>Candice Schramm</div>
+              <Typography gutterBottom variant="subtitle1" color="primary">
+                I am a web developer and mortgage loan processor. I can be found
+                at the local coffee shop working on my next creative project or
+                collaborating with other software developers to make our
+                application ideas come to life on the web. I guess you could say
+                I have three loves in life: coffee, creating innovative web
+                applications and the outdoors. Interested in getting outside? No
+                problem. Meet me in the mountains for some rock climbing,
+                snowboarding, hiking, or camping. It's important stay focused
+                and inspired to do what you love and I love challenging myself
+                to create fun and interesting web applications using clean code
+                and creative UX/UI skills... and coffee and the outdoors, of
+                course.
+              </Typography>
             </Grid>
           </Grid>
         </Paper>
