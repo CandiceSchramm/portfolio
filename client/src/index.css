@@ -29,8 +29,16 @@ a {
 }
 
 .skill-logo {
-  width: 128px;
+  width: 140px;
   /* height: 128px; */
+
+}
+.image-label {
+  display: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  height: 100px;
 }
 
 .font-style-title {

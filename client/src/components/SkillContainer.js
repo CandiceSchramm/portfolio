@@ -33,6 +33,7 @@ function PaperSheet(props) {
         <Paper className={classes.root && classes.paper} elevation={8}>
           <Grid
             container
+            spacing={32}
             direction="row"
             justify="space-around"
             alignItems="center"
@@ -40,12 +41,13 @@ function PaperSheet(props) {
             <Grid item sm={12}>
               <Grid
                 container
+                spacing={32}
                 direction="row"
                 justify="space-around"
                 alignItems="center"
               >
                 {skillLogos.map((skillLogo, index) => (
-                  <Skill img={skillLogo} key={index} />
+                    <Skill img={skillLogo} key={index} />
                 ))}
               </Grid>
             </Grid>
