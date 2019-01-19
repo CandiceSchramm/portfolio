@@ -13,12 +13,12 @@ const styles = theme => ({
 });
 
 function PaperSheet(props) {
-  const { classes, projectItems } = props;
+  const { classes, projects } = props;
 
   return (
     <div className="center-skill-container">
     <Paper className={classes.root} elevation={8}>
-      {projectItems.map(project => (
+      {projects.map(project => (
         <Project title={project.title} image={project.img} />
       ))}
       </Paper>

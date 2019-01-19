@@ -5,7 +5,6 @@ class Project extends Component {
     return (
       <div>
         <img src={this.props.image} alt="project_img" />
-        <p>{this.props.title}</p>
       </div>
     );
   }

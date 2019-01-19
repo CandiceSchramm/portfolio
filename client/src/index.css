@@ -29,9 +29,8 @@ a {
 }
 
 .skill-logo {
-  width: 140px;
-  /* height: 128px; */
-
+  height: 140px;
+  display: block
 }
 .image-label {
   display: absolute;

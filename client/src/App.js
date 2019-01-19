@@ -40,58 +40,109 @@ import groupSquadGoalsPic from "./images/project_squad_goals.png";
 
 // skill images
 
-const images = [
-  mongoDBLogo,
-  expressLogo,
-  reactLogo,
-  nodeJSLogo,
-  javascriptLogo,
-  restApiLogo,
-  bootstrapLogo,
-  css3Logo,
-  sqlLogo,
-  passportLogo,
-  sequelizeLogo,
-  yarnLogo,
-  npmLogo,
-  html5Logo,
-  vsLogo,
-  herokuLogo,
-  githubLogo,
-  jqueryLogo
+const skillsList = [
+  {
+    title: "MongoDB",
+    logo: mongoDBLogo,
+    url: "https://www.mongodb.com/"
+  },
+  {
+    title: "Express",
+    logo: expressLogo,
+    url: "https://expressjs.com/"
+  },
+  {
+    title: "React",
+    logo: reactLogo,
+    url: "https://reactjs.org/"
+  },
+  {
+    title: "Node JS",
+    logo: nodeJSLogo,
+    url: "https://nodejs.org/en/about/"
+  },
+  {
+    title: "Javascript",
+    logo: javascriptLogo,
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  {
+    title: "RESTful API",
+    logo: restApiLogo,
+    url: "https://restfulapi.net/"
+  },
+  {
+    title: "Bootstrap",
+    logo: bootstrapLogo,
+    url: "https://getbootstrap.com/"
+  },
+  {
+    title: "CSS3",
+    logo: css3Logo,
+    url: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3"
+  },
+  {
+    title: "SQL",
+    logo: sqlLogo,
+    url: "https://dev.mysql.com/"
+  },
+  {
+    title: "Passport.js",
+    logo: passportLogo,
+    url: "http://www.passportjs.org/"
+  },
+  {
+    title: "Sequalize.js",
+    logo: sequelizeLogo,
+    url: "http://docs.sequelizejs.com/"
+  },
+  {
+    title: "Yarn",
+    logo: yarnLogo,
+    url: "https://yarnpkg.com/en/"
+  },
+  {
+    title: "Node Package Manager",
+    logo: npmLogo,
+    url: "https://www.npmjs.com/"
+  },
+  {
+    title: "HTML5",
+    logo: html5Logo,
+    url: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+  },
+  {
+    title: "Visual Studio Code",
+    logo: vsLogo,
+    url: "https://code.visualstudio.com/"
+  },
+  {
+    title: "Heroku",
+    logo: herokuLogo,
+    url: "https://www.heroku.com/"
+  },
+  {
+    title: "GitHub",
+    logo: githubLogo,
+    url: "https://github.com/"
+  },
+  {
+    title: "jQuery",
+    logo: jqueryLogo,
+    url: "https://jquery.com/"
+  }
 ];
 
 //projects info
 
-const projects = [
-  {
-    img: memoryGamePic,
-    title: "Memory Game"
-  },
-  {
-    img: crystalCollectorPic,
-    title: "Crystal Collector"
-  },
-  {
-    img: liriPic,
-    title: "Liri Node App"
-  },
-  {
-    img: bamazonPic,
-    title: "Bamazon Node/SQL App"
-  },
-  {
-    img: burgerPic,
-    title: "Eat Dem Burgers!"
-  },
-  {
-    img: hushPic,
-    title: "Hush... What's Your Secret?"
-  },
-  {
-  img: groupSquadGoalsPic,
-  title: "#SquadGoals"
-  }
+const projectList = [
+  { img: memoryGamePic, title: "Memory Game" },
+  { img: crystalCollectorPic, title: "Crystal Collector" },
+  { img: liriPic, title: "Liri Node App" },
+  { img: bamazonPic, title: "Bamazon Node/SQL App" },
+  { img: burgerPic, title: "Eat Dem Burgers!" },
+  { img: hushPic, title: "Hush... What's Your Secret?" },
+  { img: groupSquadGoalsPic, title: "#SquadGoals" }
 ];
 
 class App extends Component {
@@ -101,16 +152,16 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Particle />
-            <Navbar/>
+            <Navbar />
             <Route exact path="/" component={Landing} />
             <Route exact path="/about" component={About} />
             <Route
               path="/skills"
-              render={() => <SkillContainer skillLogos={images} />}
+              render={() => <SkillContainer skills={skillsList} />}
             />
             <Route
               path="/projects"
-              render={() => <ProjectsContainer projectItems={projects} />}
+              render={() => <ProjectsContainer projects={projectList} />}
             />
           </div>
         </BrowserRouter>

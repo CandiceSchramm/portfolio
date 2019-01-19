@@ -13,13 +13,14 @@ const styles = theme => ({
   },
   paper: {
     minHeight: "30vh",
-    marginTop: "10vh",
+    marginTop: "5vh",
+    marginBottom: "5vh",
     padding: "6vh"
   }
 });
 
 function PaperSheet(props) {
-  const { classes, skillLogos } = props;
+  const { classes, skills } = props;
 
   return (
     <Grid
@@ -29,11 +30,11 @@ function PaperSheet(props) {
       alignItems="center"
       className="center-item"
     >
-      <Grid item sm={8}>
+      <Grid item sm={9}>
         <Paper className={classes.root && classes.paper} elevation={8}>
           <Grid
             container
-            spacing={32}
+            spacing={16}
             direction="row"
             justify="space-around"
             alignItems="center"
@@ -41,13 +42,13 @@ function PaperSheet(props) {
             <Grid item sm={12}>
               <Grid
                 container
-                spacing={32}
+                spacing={8}
                 direction="row"
                 justify="space-around"
                 alignItems="center"
               >
-                {skillLogos.map((skillLogo, index) => (
-                    <Skill img={skillLogo} key={index} />
+                {skills.map((skill, index) => (
+                    <Skill img={skill.logo} key={index} title={skill.title} link={skill.url} />
                 ))}
               </Grid>
             </Grid>

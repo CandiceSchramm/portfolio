@@ -13,7 +13,7 @@ const styles = theme => ({
   },
   paper: {
     minHeight:"40vh",
-    marginTop: "10vh",
+    marginTop: "5vh",
     padding: "6vh"
   }
 });
