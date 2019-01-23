@@ -6,12 +6,7 @@ class Skill extends Component {
   render() {
     return (
       <Grid item xm>
-        <Grid
-          container
-          direction="row"
-          justify="center"
-          alignItems="center"
-        />
+        <Grid container direction="row" justify="center" alignItems="center" />
         <Grid item sm>
           <img
             src={this.props.img}

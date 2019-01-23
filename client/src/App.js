@@ -136,7 +136,7 @@ const skillsList = [
 //projects info
 
 const projectList = [
-  { img: memoryGamePic, title: "Memory Game" },
+  { img: memoryGamePic, title: "Memory Game", link: "" } ,
   { img: crystalCollectorPic, title: "Crystal Collector" },
   { img: liriPic, title: "Liri Node App" },
   { img: bamazonPic, title: "Bamazon Node/SQL App" },
