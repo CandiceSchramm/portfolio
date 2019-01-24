@@ -9,17 +9,22 @@ class Project extends Component {
         <Grid container direction="row" justify="center" alignItems="center">
           <Grid item sm>
             <div>
-              <a href={this.props.link}>
+              <a
+                href={this.props.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src={this.props.image}
                   alt={this.props.title}
                   className="project-image"
                 />
+
+                <Typography align="center" variant="subtitle1" color="primary">
+                  {this.props.title}
+                </Typography>
               </a>
             </div>
-            <Typography align="center" variant="subtitle1" color="primary">
-              {this.props.title}
-            </Typography>
           </Grid>
         </Grid>
       </Grid>

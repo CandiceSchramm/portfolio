@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import Particle from "./components/Particles";
 
+//components
+import Particle from "./components/Particles";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import About from "./components/About";
 import SkillContainer from "./components/SkillContainer";
 import ProjectsContainer from "./components/ProjectsContainer";
+import Resume from "./components/Resume";
+
+//resume imports
+import resumeImage from "./files/Resume-CandiceSchramm-WebDeveloper2018.jpg";
 
 // skill imports
 import reactLogo from "./images/react_logo.png";
@@ -34,9 +39,11 @@ import memoryGamePic from "./images/project_emoji.jpeg";
 import crystalCollectorPic from "./images/project_crystal_collector.jpg";
 import liriPic from "./images/project_liri.png";
 import bamazonPic from "./images/project_bamazon.png";
-import burgerPic from "./images/project_burger.png";
 import hushPic from "./images/project_hush.png";
 import groupSquadGoalsPic from "./images/project_squad_goals.png";
+
+// resume images
+const resumeDoc = resumeImage
 
 // skill images
 
@@ -136,13 +143,24 @@ const skillsList = [
 //projects info
 
 const projectList = [
-  { img: memoryGamePic, title: "Memory Game", link: "" } ,
-  { img: crystalCollectorPic, title: "Crystal Collector" },
+  {
+    img: memoryGamePic,
+    title: "Memory Game",
+    link: "https://candiceschramm.github.io/clickEach/"
+  },
+  {
+    img: crystalCollectorPic,
+    title: "Crystal Collector",
+    link: "https://candiceschramm.github.io/crystal-collector/"
+  },
   { img: liriPic, title: "Liri Node App" },
   { img: bamazonPic, title: "Bamazon Node/SQL App" },
-  { img: burgerPic, title: "Eat Dem Burgers!" },
-  { img: hushPic, title: "Hush... What's Your Secret?" },
-  { img: groupSquadGoalsPic, title: "#SquadGoals" }
+  {
+    img: hushPic,
+    title: "Hush... What's Your Secret?",
+    link: "https://dry-bastion-95482.herokuapp.com/"
+  },
+  { img: groupSquadGoalsPic, title: "#SquadGoals", link: "" }
 ];
 
 class App extends Component {
@@ -156,12 +174,19 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/about" component={About} />
             <Route
+              exact
               path="/skills"
               render={() => <SkillContainer skills={skillsList} />}
             />
             <Route
+              exact
               path="/projects"
               render={() => <ProjectsContainer projects={projectList} />}
+            />
+            <Route
+              exact
+              path="/resume"
+              render={() => <Resume image={resumeDoc} />}
             />
           </div>
         </BrowserRouter>

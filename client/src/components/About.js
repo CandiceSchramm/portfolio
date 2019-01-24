@@ -12,8 +12,9 @@ const styles = theme => ({
     paddingBottom: theme.spacing.unit * 2
   },
   paper: {
-    minHeight:"40vh",
+    minHeight: "30vh",
     marginTop: "5vh",
+    marginBottom: "5vh",
     padding: "6vh"
   }
 });

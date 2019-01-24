@@ -40,7 +40,7 @@ function Navbar(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" color="inherit" className={classes.grow}>
-          <p className="font-style-menu">CS</p>
+            <p className="font-style-menu">CS</p>
           </Typography>
           <a href="/">
             <Button color="inherit">Home</Button>
@@ -54,7 +54,9 @@ function Navbar(props) {
           <a href="/projects">
             <Button color="inherit">Projects</Button>
           </a>
-          <Button color="inherit">Resume</Button>
+          <a href="/resume">
+            <Button color="inherit">Resume</Button>
+          </a>
         </Toolbar>
       </AppBar>
     </div>

@@ -6,6 +6,9 @@ import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import GithubIcon from "./GithubIcon";
+import LinkedinIcon from "./LinkedinIcon";
+import GooglePlusIcon from "./GooglePlusIcon";
 
 const styles = theme => ({
   root: {
@@ -14,7 +17,7 @@ const styles = theme => ({
     paddingBottom: theme.spacing.unit * 2
   },
   fab: {
-    margin: theme.spacing.unit
+    margin: theme.spacing.unit,
   },
   extendedIcon: {
     marginRight: theme.spacing.unit
@@ -70,13 +73,13 @@ function PaperSheet(props) {
               >
                 <Grid item sm={4} className={classes.socialButtons}>
                   <Fab color="primary" aria-label="Add" className={classes.fab}>
-                    <AddIcon />
+                    <GooglePlusIcon/>
                   </Fab>
                   <Fab color="primary" aria-label="Add" className={classes.fab}>
-                    <AddIcon />
+                    <LinkedinIcon/>
                   </Fab>
                   <Fab color="primary" aria-label="Add" className={classes.fab}>
-                    <AddIcon />
+                    <GithubIcon />
                   </Fab>
                 </Grid>
               </Grid>
