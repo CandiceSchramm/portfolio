@@ -13,7 +13,7 @@ const styles = theme => ({
   paper: {
     minHeight: "40vh",
     marginTop: "5vh",
-    padding: "6vh"
+    marginBottom: "10vh"
   },
   img: {
     margin: 'auto',
@@ -37,7 +37,7 @@ function PaperSheet(props) {
       <Grid item sm={9}>
         <Paper className={classes.root && classes.paper} elevation={8}>
         <Grid item sm={12}>
-          <img src={image} alt="candice's resume" />
+          <img src={image} alt="candice's resume" className="resume" />
           </Grid>
         </Paper>
       </Grid>
