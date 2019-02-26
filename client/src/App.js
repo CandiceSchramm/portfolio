@@ -12,7 +12,7 @@ import Resume from "./components/Resume";
 
 //resume imports
 
-import resumeImage from "./files/Resume-CandiceSchramm-WebDeveloper-2019.jpg";
+import resumeImage from "./files/Resume-CandiceSchramm-WebDeveloper2019.jpg";
 
 // skill imports
 import reactLogo from "./images/react_logo.png";
