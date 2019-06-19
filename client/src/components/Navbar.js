@@ -71,7 +71,7 @@ class Navbar extends React.Component {
         onClose={this.handleMobileMenuClose}
       >
         <MenuItem>
-          <a href="/events">Home</a>
+          <a href="/">Home</a>
         </MenuItem>
         <MenuItem>
           <a href="/about">About</a>
