@@ -62,9 +62,6 @@ class Navbar extends React.Component {
     const isMenuOpen = Boolean(anchorel);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-    // const renderMenu = (
-
-    // );
     const renderMobileMenu = (
       <Menu
         anchorel={mobileMoreAnchorEl}
@@ -137,7 +134,6 @@ class Navbar extends React.Component {
                 <Button color="inherit">Resume</Button>
               </a>
             </Toolbar>
-            {/* {renderMenu} */}
           </Toolbar>
         </AppBar>
         {renderMobileMenu}
