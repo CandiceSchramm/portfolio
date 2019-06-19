@@ -71,15 +71,20 @@ function PaperSheet(props) {
                 alignItems="center"
               >
                 <Grid item sm={4} className={classes.socialButtons}>
-                  <Fab color="primary" aria-label="Add" className={classes.fab}>
-                    <GooglePlusIcon/>
-                  </Fab>
-                  <Fab color="primary" aria-label="Add" className={classes.fab}>
-                    <LinkedinIcon/>
-                  </Fab>
-                  <Fab color="primary" aria-label="Add" className={classes.fab}>
-                    <GithubIcon />
-                  </Fab>
+                  <Grid
+                    container
+                    spacing={8}
+                    direction="col"
+                    justify="center"
+                    alignItems="center"
+                  >
+                    <Fab color="primary" aria-label="Add" className={classes.fab}>
+                      <LinkedinIcon />
+                    </Fab>
+                    <Fab color="primary" aria-label="Add" className={classes.fab}>
+                      <GithubIcon />
+                    </Fab>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>
